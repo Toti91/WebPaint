@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body {
+	background-color: #333333;
+	color: #E0E0E0;
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+}
+
+button:hover, input:hover, .fake-btns:hover {
+	cursor: pointer;
+}
+
+body {
+	overflow: hidden;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+    #banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #121212
+    }
+    #container {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        #canv{
+            position: relative;
+            flex-grow: 1;
+            overflow: hidden;
+            #draw {
+                position: absolute;
+                background-color: #FAFAFA;
+            }
+            #tempCanvas {
+                position: absolute;
+                z-index: 999;
+            }
+        }
+        #buttons {
+            font-size: 1.2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+            #upload {
+                display: none;
+            }
+            .section {
+                padding-bottom: 1em;
+            }
+            
+            .sels {
+                margin-bottom: 0.5em;
+            }
+            .sels, .btns {
+                width: 4em;
+                height: 1.5em;
+            }
+            
+            .t-btns {
+                width: 2.5em;
+                height: 1.5em;
+                margin-top: 0.2em;
+                border-radius: 0.2em;
+            }
+            
+            button, .fake-btns {
+                background-color: #E0E0E0;
+                outline: none;
+                border: none;
+                padding: 0;
+            }
+            .fake-btns {
+                position: relative;
+                top: -0.25em;
+                background-color: #E0E0E0;
+                color: #121212;
+                width: 4em;
+                height: 1.5em;
+                text-align: center;
+            }
+            
+            button, .fake-btns {
+                border-radius: 0.5em;
+            }
+        }
+    }
+    .noDrag {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+    }
+    
+    
+    
+    #savedImages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #121212
+    }
+    
+    .tooltip {
+        position:relative;
+    }
+    .tooltip span {
+        display:none;
+    }
+    
+    .tooltip:hover span {
+        display:block;
+        background-color:black;
+        white-space: nowrap;
+        border-radius:5px;
+        color:white;
+        box-shadow:1px 1px 3px gray;
+        position:absolute;
+        padding:5px;
+        top:1.3em;
+        left:0px;   
+        max-width:200px; /* I don't want the width to be too large... */
+        z-index: 10;
+    }
+}
+
+
+
+
+

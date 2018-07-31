@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Draw stuff</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="./font-awesome.min.css">
+	</head>
+	<body>
+		<div id="main">
+			<div id="container">
+				<div id="buttons">
+					<div class="row section">
+						<button type="submit" class="fa fa-floppy-o btns tooltip" id="save"><span class="tooltiptext">Save</span></button>
+						<label for="upload" class="fa fa-upload fake-btns tooltip"><span class="tooltiptext">Upload</span></label>
+						<input type="file" accept="image/*" id="upload" class="tooltip">
+					</div>
+					<div id="tools" class="section">
+						<div class="row">
+							<button type="submit" value="pencil" class="fa fa-pencil t-btns toolselect tooltip" id="pencil">
+								<span class="tooltiptext">Pencil</span>
+							</button>
+							<button type="submit" value="line" class="fa fa-long-arrow-right t-btns toolselect tooltip" id="line">
+								<span class="tooltiptext">Line</span>
+							</button>
+							<button type="submit" value="rect" class="fa fa-square-o t-btns toolselect tooltip" id="rect">
+								<span class="tooltiptext">Rectangle</span>
+							</button>
+						</div>
+						<div class="row">				
+							<button type="submit" value="circle" class="fa fa-circle-o t-btns toolselect tooltip" id="circle">
+								<span class="tooltiptext">Circle</span>
+							</button>
+							<button type="submit" value="text" class="fa fa-font t-btns toolselect tooltip" id="text">
+								<span class="tooltiptext">Text</span>
+							</button>
+							<button type="submit" value="eraser" class="fa fa-eraser t-btns toolselect tooltip" id="eraser">
+								<span class="tooltiptext">Eraser</span>
+							</button>
+						</div>
+						<div class="row">
+							<button type="submit" value="select" class="fa fa-arrows t-btns toolselect tooltip" id="select">
+								<span class="tooltiptext">Select</span>
+							</button>
+						</div>
+					</div>
+					<input type="color" name="colors" id="colors" class="sels" />
+					<input type="number" class="sels" id="widths" value="6" min="1" max="60" />
+					<div class="section">
+						<button type="submit" class="fa fa-file btns tooltip" id="fill"><span class="tooltiptext">Fill</span></button>
+					</div>
+					<div class="row section">
+						<button type="submit" class="fa fa-undo btns tooltip" id="undo"><span class="tooltiptext">Undo</span></button>
+						<button type="submit" class="fa fa-repeat btns tooltip" id="redo"><span class="tooltiptext">Redo</span></button>
+					</div>
+					<button type="submit" class="fa fa-trash btns tooltip" id="clear"><span class="tooltiptext">Clear</span></button>
+				</div>
+				<div id="canv">
+						<canvas id="draw"><p>Canvas tag not supported.</p></canvas>
+				</div>
+			</div>
+        </div>
+	</body>
+</html>
